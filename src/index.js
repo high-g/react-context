@@ -9,9 +9,9 @@ export const FruitContext = createContext()
 
 ReactDOM.render(
   <React.StrictMode>
-    <FruitContext value={{ fruits }}>
+    <FruitContext.Provider value={{ fruits }}>
       <App />
-    </FruitContext>
+    </FruitContext.Provider>
   </React.StrictMode>,
   document.getElementById('root')
 )
