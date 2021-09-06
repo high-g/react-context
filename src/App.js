@@ -1,13 +1,15 @@
+import { useContext } from 'react'
 import { FruitContext } from './index'
 
 const App = () => {
+  const { fruits } = useContext(FruitContext)
+  console.log('fruits', fruits)
   return (
-    <FruitContext.Consumer>
-      {(value) => {
-        const { fruits } = value
-        return fruits.map((val, index) => <p key={index}>{val}</p>)
-      }}
-    </FruitContext.Consumer>
+    <>
+      {fruits.map((val, index) => (
+        <p key={index}>{val}</p>
+      ))}
+    </>
   )
 }
 
